@@ -1,0 +1,88 @@
+html,
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -ms-overflow-style: none;
+  padding: 0;
+  margin: 0 auto;
+  font-size: 16px;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+* {
+  user-select: none;
+}
+
+@keyframes animation {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, -20%, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translateZ(0);
+  }
+}
+
+.pac-container {
+  position: absolute;
+  min-width: 40vw !important;
+  box-shadow:
+          0px 2px 4px -1px rgba(0,0,0,0.2),
+          0px 4px 5px 0px rgba(0,0,0,0.14),
+          0px 1px 10px 0px rgba(0,0,0,0.12);
+  border-radius: 2rem;
+  margin: 1.5rem 0 0 -1vw;
+  padding: 1rem;
+  z-index: 2000;
+  background-color: white;
+  animation: animation .5s;
+}
+.pac-container> :hover {
+ cursor: pointer;
+  background-color: rgba(33, 66, 82,0.12);
+  border-radius: 1rem;
+}
+.pac-container:after {
+  display: none;
+}
+.pac-item {
+  height: 4rem;
+  border: none;
+  font-size: 1rem;
+}
+
+.pac-item-query {
+  font-size: 1rem;
+}
+.pac-matched {
+  font-size: 1rem;
+}
+
+@media (max-width: 1200px) {
+  html,
+  body {
+    font-size: 15px;
+  }
+  .pac-container {
+    width: 70vw !important;
+  }
+
+}
+@media (max-width: 900px) {
+  html,
+  body {
+    font-size: 14px;
+  }
+  .pac-container {
+    width: 80vw !important;
+  }
+}
